@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> <!--<![endif]-->
+    <f:view contentType="text/html">
+        <h:head>
+            <!-- Page Title -->
+            <title>İDO - İstanbul Deniz Otobüsleri A.Ş.</title>
+
+            <!-- Meta Tags -->
+            <meta name="first" content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+            <meta charset="utf-8"/>
+            <meta name="keywords" content="HTML5 Template" />
+            <meta name="description" content="Travelo | Responsive HTML5 Travel Template"/>
+            <meta name="author" content="SoapTheme"/>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+            <!-- Theme Styles -->
+            <link rel="stylesheet" href="css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="css/font-awesome.min.css"/>
+            <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
+            <link rel="stylesheet" href="css/animate.min.css"/>
+            <link rel="stylesheet" type="text/css" href="components/revolution_slider/css/settings.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="components/revolution_slider/css/style.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="components/jquery.bxslider/jquery.bxslider.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="components/flexslider/flexslider.css" media="screen" />
+
+            <!-- Main Style -->
+            <link id="main-style" rel="stylesheet" href="css/style.css"/>
+
+            <!-- Custom Styles -->
+            <link rel="stylesheet" href="css/custom.css"/>
+
+            <!-- Updated Styles -->
+            <link rel="stylesheet" href="css/updates.css"/>
+
+            <!-- Responsive Styles -->
+            <link rel="stylesheet" href="css/responsive.css"/>
+
+            <!-- CSS for IE -->
+            <!--[if lte IE 9]>
+                <link rel="stylesheet" type="text/css" href="css/ie.css" />
+            <![endif]-->
+
+
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+              <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+              <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+            <![endif]-->
+        </h:head>
+        <h:body>
+            <h:message for="EpostaText"></h:message>
+            <div id="page-wrapper">
+                <header id="header" class="navbar-static-top">
+                    <div class="topnav hidden-xs">
+                        <div class="container">
+                            <ul class="quick-menu pull-left">
+                                <li><a href="#travelo-login" class="soap-popupbox">MÜŞTERİ GİRİŞİ</a></li>
+                                <li><a href="#travelo-signup" class="soap-popupbox">KAYIT</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="main-header">
+                        <div class="container">
+                            <h1 class="logo navbar-brand">
+                                <a href="index.xhtml" title="Travelo - home">
+                                    <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                                </a>
+                            </h1>
+
+                            <nav id="main-menu" role="navigation">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="index.xhtml">Anasayfa</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="kurumsal.xhtml">Kurumsal</a></li>
+
+                                   
+
+
+                                    <li class="menu-item-has-children">
+                                        <a href="kampanyalar.xhtml">Kampanyalar</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a>
+                                    </li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="tarifeler.xhtml">Tarifeler</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-deneyimi.xhtml">Yolculuk Deneyimi</a>
+                                    </li>
+                                     <li class="menu-item-has-children">
+                                        <a href="musteri.xhtml">Müşteri Paneli</a>
+                                    </li>
+                                    
+                                    
+
+
+                                </ul>     
+                            </nav>
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="travelo-signup" class="travelo-signup-box travelo-box">
+
+                        <div class="simple-signup">
+                            <h:form>
+
+
+
+                                <div class="form-group">
+                                    <h:outputText value="İsim:"/>
+                                    <h:inputText class="input-text full-width" id="IsimText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.isim}" maxlength="20"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputText value="Soyisim:"/>
+                                    <h:inputText class="input-text full-width" id="SoyisimText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.sisim}" maxlength="20"/>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputText value="T.C:"/>
+                                    <h:inputText class="input-text full-width" id="TCText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.TC}" maxlength="11">
+                                        <f:validateLength minimum="11" maximum="11"/>
+     </h:inputText>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputText value="Doğum Tarihi:"/>
+                                    <h:inputText class="input-text full-width" id="DoğumTarihiText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.dtarihi}"  maxlength="11"/> 
+                                </div>
+
+
+                                <div class="form-group">
+                                    <h:outputText value="E-Posta:"/>
+                                    <h:inputText class="input-text full-width" id="EpostaText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.eposta}" maxlength="30">
+                                        <f:validateRegex pattern="(?:[a-z0-9!#$%'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%'*+/=?^_`{|}~-]+)*|(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"/>                                      
+                                    </h:inputText>                                  
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputText value="Şifre:"/>
+                                    <h:inputText class="input-text full-width" id="SifreText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{MusteriBean.sifre}" maxlength="30"/>
+                                </div>                    
+
+
+                                <h:commandButton class="input-text full-width" value="Musteri Ekle" action="#{MusteriBean.ekleKullanici}"/>
+
+
+                            </h:form>
+                        </div>
+                        <div class="seperator"></div>
+                        <p>Kayıtlı mısınız? <a href="#travelo-login" class="goto-login soap-popupbox">Giriş</a></p>
+                    </div>
+
+
+                    <div id="travelo-login" class="travelo-login-box travelo-box">
+                        <h:form>
+
+                            <label>E-Mail: </label>
+                            <h:inputText  class="input-text full-width" value="#{MAloginBean.eposta}" id="eposta"></h:inputText>
+                            <label>Şifre:  </label>
+                            <h:inputSecret class="input-text full-width" value="#{MAloginBean.sifre}"></h:inputSecret>
+                            <hr />
+                            <h:commandButton type="submit" class="input-text full-width" action="#{MAloginBean.check}"
+                                             value="Login"></h:commandButton>
+                            <div class="form-group">
+                                <a href="#" class="forgot-password pull-right">Şifremi Unuttum</a>
+                                <div class="checkbox checkbox-inline">
+                                    <label>
+                                        <input type="checkbox"/> Beni Hatırla
+                                    </label>
+                                </div>
+                            </div>
+                        </h:form>
+                        <div class="seperator"></div>
+                        <p>Üye kaydınız yok mu? <a href="#travelo-signup" class="goto-signup soap-popupbox">KAYIT OL</a></p>
+                    </div>
+
+                </header>
+                <div id="slideshow">
+                    <div class="fullwidthbanner-container">
+                        <div class="revolution-slider" style="height: 0; overflow: hidden;">
+                            <ul>    <!-- SLIDE  -->
+                                <!-- Slide1 -->
+                                <li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="slider5.jpg" alt=""/>
+                                </li>
+
+                                <!-- Slide2 -->
+                               
+<li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="slider4.jpg" alt=""/>
+                                </li>
+                              
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <section id="content">
+                    <div class="search-box-wrapper">
+                        <div class="search-box container">
+                            <ul class="search-tabs clearfix">
+                                <li class="active"><a href="#hotels-tab" data-toggle="tab">Bilet Al</a></li>
+                            </ul>
+
+
+                            <div class="search-tab-content">
+                                <div class="tab-pane fade active in" id="hotels-tab">
+                                    <h:form>
+                                        <div class="row">
+                                            <div class="form-group col-md-4">
+                                                <h4 class="title">Nereden/Nereye?</h4>
+                                                <div class="row">
+                                                    <div class="col-xs-6 col-md-6">
+                                                        <label>Kalkış Noktası</label>
+
+                                                        <p:selectOneMenu class="full-width" id="kalkis" value="#{dropdownView.kalkis}" style="" >
+
+                                                            <f:selectItem itemLabel="Kalkis" itemValue="" noSelectionOption="true" />
+                                                            <f:selectItems value="#{dropdownView.nerden}" />
+                                                        </p:selectOneMenu>
+
+                                                    </div>
+
+                                                    <div class="col-xs-6 col-md-6">
+                                                        <label>Varış Noktası</label>
+
+                                                        <p:selectOneMenu id="varis" value="#{dropdownView.varis}" style="width:150px">
+                                                            <f:selectItem itemLabel="Varis" itemValue="" noSelectionOption="true" />
+                                                            <f:selectItems value="#{dropdownView.nereye}" />
+                                                        </p:selectOneMenu>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group col-sm-6 col-md-2">
+                                                <h4 class="title">Tarih</h4>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label>Bilet Tarihi</label>
+                                                        <div class="datepicker-wrap">
+                                                            <h:inputText id="TarihText" required="true" value="#{dropdownView.tarih}" class="input-text full-width" />
+
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="form-group col-sm-6 col-md-4">
+                                                <h4 class="title">Kim</h4>
+                                                <div class="row">                                 
+                                                    <div class="col-xs-4 col-md-6">
+                                                        <label>Tam</label>
+                                                        <p:selectOneMenu id="tam" value="#{dropdownView.tam}" style="width:150px">
+                                                            <f:selectItem itemLabel="0" itemValue="0" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="1" itemValue="1" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="2" itemValue="2" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="3" itemValue="3" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="4" itemValue="4" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="5" itemValue="5" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="6" itemValue="6" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="7" itemValue="7" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="8" itemValue="8" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="9" itemValue="9" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="10" itemValue="10" noSelectionOption="true" />
+
+
+                                                        </p:selectOneMenu>
+                                                    </div>
+                                                    <div class="col-xs-4 col-md-6">
+                                                        <label>İndirimli</label>
+                                                        <p:selectOneMenu id="indirimli" value="#{dropdownView.indirimli}" style="width:150px">
+                                                           <f:selectItem itemLabel="0" itemValue="0" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="1" itemValue="1" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="2" itemValue="2" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="3" itemValue="3" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="4" itemValue="4" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="5" itemValue="5" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="6" itemValue="6" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="7" itemValue="7" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="8" itemValue="8" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="9" itemValue="9" noSelectionOption="true" />
+                                                            <f:selectItem itemLabel="10" itemValue="10" noSelectionOption="true" />
+
+                                                        </p:selectOneMenu>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-sm-6 col-md-2">
+                                                <h4 style="color:#fff;">.</h4>
+                                                   <div class="row">
+                                                       <label style="color:#fff;">.</label>
+
+                                                <p:commandButton value="BİLETLERİ GÖSTER" id="nonAjax"  action="#{dropdownView.check()}" ajax="false" />
+                                                   </div>
+                                            </div>
+                                        </div>
+                                    </h:form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container section">
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="icon-box style3 counters-box">
+                                    <div class="numbers">
+                                        <i class="soap-icon-cruise select-color"></i>
+                                        <span class="display-counter" data-value="#{VapurBean.vapurSay}">0</span>
+                                    </div>
+                                    <div class="description">Vapurumuz Var</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="icon-box style3 counters-box">
+                                    <div class="numbers">
+                                        <i class="soap-icon-passenger skin-color"></i>
+                                        <span class="display-counter" data-value="#{dropdownView.yolcuSay}">0</span>
+                                    </div>
+                                    <div class="description">Kişiyi taşıdık</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="icon-box style3 counters-box">
+                                    <div class="numbers">
+                                        <i class="soap-icon-anchor green-color"></i>
+                                        <span class="display-counter" data-value="#{SeferBean.seferSay}">0</span>
+                                    </div>
+                                    <div class="description">Sefer Yaptık</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="icon-box style3 counters-box">
+                                    <div class="numbers">
+                                        <i class="soap-icon-trunk-3 red-color"></i>
+                                        <span class="display-counter" data-value="450">10</span>
+                                    </div>
+                                    <div class="description">Bagaj Taşıdık</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <footer id="footer">
+                    <div class="footer-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Keşfet</h2>
+                                    <ul class="discover triangle hover row">
+                                        <li class="col-xs-6"><a href="index.xhtml">Anasayfa</a></li>
+                                        <li class="col-xs-6"><a href="../admin/login.xhtml">Admin Girişi</a></li>
+                                        <li class="col-xs-6"><a href="tarifeler.xhtml">Tarifeler</a></li>
+                                        <li class="col-xs-6"><a href="kampanyalar.xhtml">Kampanyalar</a></li>
+                                        <li class="col-xs-6"><a href="duyurular.xhtml">Duyurular</a></li>
+                                        <li class="col-xs-6"><a href="kalite-politikamız.xhtml">Kalite Politikamız</a></li>
+                                        <li class="col-xs-6"><a href="odeme-noktalari.xhtml">Ödeme Noktaları</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-sonrasi.xhtml">Yolculuk Sonrası</a></li>
+                                        <li class="col-xs-6"><a href="sss.xhtml">S.S.S.</a></li>
+                                        <li class="col-xs-6"><a href="kurumsal.xhtml">Kurumsal</a></li>
+                                                                                <li class="col-xs-6"><a href="personelGirisi.xhtml">Personel Girişi</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Duyurular</h2>
+                                    <h:dataTable  value="#{DuyuruBean.getDuyuruAltCek()}"  var="myvariable" >
+
+                                        <h:column>
+
+
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>
+                                            <BR/>
+
+
+
+                                        </h:column>
+
+
+
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Kampanyalar</h2>
+                                    <h:dataTable  value="#{KampanyaBean.kampanyaAltCek}"  var="myvariable" >
+                                        <h:column> 
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>  
+                                                                                        <BR/>
+
+                                        </h:column>
+                                        
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>İletişim</h2>
+                                    <p>Her türlü konuda şirketimizin bilgi işlem sorumlusu ile görüşebilirsiniz</p>
+                                    <br />
+                                    <address class="contact-details">
+                                        <span class="contact-phone"><i class="soap-icon-phone"></i> 444 44 44</span>
+                                        <br />
+                                        <a href="#" class="contact-email">info@ido.com</a>
+                                    </address>
+                                    <ul class="social-icons clearfix">
+                                        <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+                                        <li class="googleplus"><a title="googleplus" href="#" data-toggle="tooltip"><i class="soap-icon-googleplus"></i></a></li>
+                                        <li class="facebook"><a title="facebook" href="#" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+                                        <li class="linkedin"><a title="linkedin" href="#" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+                                        <li class="vimeo"><a title="vimeo" href="#" data-toggle="tooltip"><i class="soap-icon-vimeo"></i></a></li>
+                                        <li class="dribble"><a title="dribble" href="#" data-toggle="tooltip"><i class="soap-icon-dribble"></i></a></li>
+                                        <li class="flickr"><a title="flickr" href="#" data-toggle="tooltip"><i class="soap-icon-flickr"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom gray-area">
+                        <div class="container">
+                            <div class="logo pull-left">
+                                <a href="index.xhtml" title="Travelo - home">
+                                    <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
+                            </div>
+                            <div class="copyright pull-right">
+                                <p>ido.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- Javascript -->
+            <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery.noconflict.js"></script>
+            <script type="text/javascript" src="js/modernizr.2.7.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+            <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
+
+            <!-- Twitter Bootstrap -->
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+
+            <!-- load revolution slider scripts -->
+            <script type="text/javascript" src="components/revolution_slider/js/jquery.themepunch.plugins.min.js"></script>
+            <script type="text/javascript" src="components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script>
+
+            <!-- Flex Slider -->
+            <script type="text/javascript" src="components/flexslider/jquery.flexslider-min.js"></script>
+
+            <!-- load BXSlider scripts -->
+            <script type="text/javascript" src="components/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+            <!-- parallax -->
+            <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+
+            <!-- waypoint -->
+            <script type="text/javascript" src="js/waypoints.min.js"></script>
+
+            <!-- load page Javascript -->
+            <script type="text/javascript" src="js/theme-scripts.js"></script>
+            <script type="text/javascript" src="js/scripts.js"></script>
+
+            <script type="text/javascript">
+                tjq(document).ready(function () {
+                    tjq('.revolution-slider').revolution(
+                            {
+                                dottedOverlay: "none",
+                                delay: 9000,
+                                startwidth: 1200,
+                                startheight: 646,
+                                onHoverStop: "on",
+                                hideThumbs: 10,
+                                fullWidth: "on",
+                                forceFullWidth: "on",
+                                navigationType: "none",
+                                shadow: 0,
+                                spinner: "spinner4",
+                                hideTimerBar: "on",
+                            });
+                });
+            </script>
+        </h:body>
+    </f:view>
+</html>
+

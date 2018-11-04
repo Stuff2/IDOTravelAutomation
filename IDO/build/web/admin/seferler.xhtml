@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!--[if IE]>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <![endif]-->
+        <title>ADMİN PANELİ - SEFERLER</title>
+        <!-- BOOTSTRAP CORE STYLE  -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <!-- FONT AWESOME ICONS  -->
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLE  -->
+        <link href="assets/css/style.css" rel="stylesheet" />
+        <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <strong>Email: </strong>info@ido.com
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END-->
+        <div class="navbar navbar-inverse set-radius-zero">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.xhtml">
+
+                        <img src="assets/img/logo.png" />
+                    </a>
+
+                </div>
+
+                <div class="left-div">
+                    <div class="user-settings-wrapper">
+                        <ul class="nav">
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-settings">
+                                    <div class="media">
+
+                                        <div class="media-body">
+                                            <h4 class="media-heading">#{SessionBean.getGorevName()}</h4>
+                                            <h5>#{SessionBean.getIsimName()}  #{SessionBean.getSisimName()}</h5>
+
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <h5>TC: #{SessionBean.getTCName()}</h5>                                  
+                                    <h5>e-Posta: #{SessionBean.getEpostaName()}</h5>
+
+                                    <hr />
+                                    <h:form><h:commandButton class="btn btn-danger btn-sm" action="#{AloginBean.logout}"
+                                                             value="Çıkış Yap"></h:commandButton></h:form>
+
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- LOGO HEADER END-->
+        <section class="menu-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-collapse collapse ">
+                            <ul id="menu-top" class="nav navbar-nav navbar-right">
+                                <li><a href="index.xhtml">Giriş</a></li>
+                                <li><a href="vapurlar.xhtml">Vapurlar</a></li>
+                                <li><a class="menu-top-active" href="seferler.xhtml">Seferler</a></li>
+                                <li><a href="personel.xhtml">Personel</a></li>
+                                <li><a href="bilet.xhtml">Bilet</a></li>
+                                                                                             <li><a href="yapilanRezervasyonlar.xhtml">Rezervasyonlar</a></li>
+
+                                <li><a href="duyurular.xhtml">Duyurular</a></li>
+                                <li><a href="kampanyalar.xhtml">Kampanyalar</a></li>
+                                <li><a href="musteriler.xhtml">Müşteriler</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION END-->
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="page-head-line">SEFERLER</h4>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="alert alert-success" role="alert">Aşağıda envanterde bulunan seferler listelenmiştir.Gösterilen seferleri silebilir yada düzenleyebilirsiniz. Yeni Sefer Ekle butonu ile yeni sefer ekleyebilirsiniz</div>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#yeniSeferEkle">Yeni Sefer Ekle</button>
+
+
+
+
+                <h:dataTable class="table table-striped table-bordered table-hover" value="#{SeferBean.sefer}"  var="myvariable" >
+
+                    <h:column>
+                        <f:facet name="header">Bilet Tarihi</f:facet>
+                            #{myvariable.K_VAKIT}
+                    </h:column>
+
+
+                    <h:column>
+                        <f:facet name="header">Kalkış Saati</f:facet>
+                            #{myvariable.Y_SÜRE}
+                    </h:column>
+
+
+                    <h:column>
+                        <f:facet name="header">Nereden</f:facet>
+                            #{myvariable.K_YERI}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Nereye</f:facet>
+                            #{myvariable.V_YERI}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Vapur Adı</f:facet>
+                            #{myvariable.ISIM}
+                    </h:column>
+
+
+                    <h:column>
+                        <f:facet name="header">Boş Koltuk Sayısı</f:facet>
+                            #{myvariable.BOS_KOLTUK}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Normal Ücret</f:facet>
+                            #{myvariable.N_UCRET}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">İndirimli Ücret</f:facet>
+                            #{myvariable.I_UCRET}
+                    </h:column>
+
+
+                    <h:column>
+                        <f:facet name="header">Düzenle</f:facet>
+
+                        <h:form>
+
+
+
+                            <h:commandButton  class="btn btn-xs btn-success"   value="Düzenle" action="#{SeferBean.sec()}">
+                                <f:setPropertyActionListener  target="#{SeferBean.is_id}" value="#{myvariable.ID}" />
+                            </h:commandButton>
+
+                        </h:form>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Sil</f:facet>
+
+                        <h:form>
+
+                            <h:commandButton  class="btn btn-xs btn-danger"   value="Sil" action="#{SeferBean.sil()}">
+                                <f:setPropertyActionListener  target="#{SeferBean.sil_id}" value="#{myvariable.ID}" />
+                            </h:commandButton>
+
+                        </h:form>
+                    </h:column>
+
+                </h:dataTable>
+
+
+
+
+            </div>
+        </div>
+        <!-- CONTENT-WRAPPER SECTION END-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>ido.com</h4>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+        <div id="yeniSeferEkle" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">Yeni Sefer Ekle</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="col">
+                            <h:form>
+
+
+
+                                <div class="form-group">
+                                    <h:outputText value="Kalkış Tarihi:"/>
+                                    <h:inputText class="form-control" id="KalkışTarihiText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.k_Vakit}" maxlength="20"/>
+                                 </div> 
+                                
+                                    <div class="form-group">
+                                    <h:outputText value="Kalkış Saati:"/>
+                                    <h:inputText class="form-control" id="KalkısSaatiText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.y_Sure}" maxlength="20"/>
+                                     </div> 
+                                    
+                                    <div class="form-group">
+                                    <h:outputText value="Kalkış Yeri:"/>
+                                    <h:inputText class="form-control" id="KalkısYeriText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.k_Yeri}" maxlength="20"/>
+                                     </div> 
+                                    
+                                    <div class="form-group">
+                                    <h:outputText value="Varış Yeri:"/>
+                                    <h:inputText class="form-control" id="VarısYeriText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.v_Yeri}" maxlength="20"/>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputText value="Vapur İsmi:"/>
+                                    <h:selectOneMenu class="form-control" id="kalkis" value="#{SeferBean.vpr_ID}">
+                <f:selectItem itemLabel="Select Name" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{vericekView.nerden}" />
+            </h:selectOneMenu>
+
+                                    <h:message for="VapurIDText"/>
+                                </div>
+
+                                  <div class="form-group">
+                                    <h:outputText value="Normal Ücret:"/>
+                                    <h:inputText class="form-control" id="NormalUcretText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.n_Ucret}" maxlength="20"/>
+                                     </div> 
+                                    
+                                    <div class="form-group">
+                                    <h:outputText value="İndirimli Ücret:"/>
+                                    <h:inputText class="form-control" id="IndirimliUcretText" required="true"
+                                                 requiredMessage="Lütfen Doldurunuz"
+                                                 value="#{SeferBean.i_Ucret}" maxlength="20"/>
+
+                                 </div> 
+
+                                <h:commandButton class="btn btn-primary" value="Ekle" action="#{SeferBean.ekle()}"/>
+
+
+                            </h:form>
+
+                        </div>
+
+                        <br/>
+
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FOOTER SECTION END-->
+        <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+        <!-- CORE JQUERY SCRIPTS -->
+        <script src="assets/js/jquery-1.11.1.js"></script>
+        <!-- BOOTSTRAP SCRIPTS  -->
+        <script src="assets/js/bootstrap.js"></script>
+    </body>
+</html>
+

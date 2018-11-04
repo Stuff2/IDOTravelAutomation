@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"> <!--<![endif]-->
+    <head>
+        <!-- Page Title -->
+    <title>İDO - İstanbul Deniz Otobüsleri A.Ş.</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Travelo | Responsive HTML5 Travel Template"/>
+    <meta name="author" content="SoapTheme"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+
+    <!-- Main Style -->
+    <link id="main-style" rel="stylesheet" href="css/style.css"/>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/custom.css"/>
+
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="css/updates.css"/>
+
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+<div id="page-wrapper">
+    <header id="header" class="navbar-static-top">
+        <div class="topnav hidden-xs">
+            <div class="container">
+
+                <ul class="quick-menu pull-left">
+                    <li><a href="#travelo-login" class="soap-popupbox">MÜŞTERİ GİRİŞİ</a></li>
+                    <li><a href="#travelo-signup" class="soap-popupbox">KAYIT</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-header">          
+
+            <div class="container">
+                <h1 class="logo navbar-brand">
+                    <a href="index.xhtml" title="Travelo - home">
+                        <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                    </a>
+                </h1>
+
+                <nav id="main-menu" role="navigation">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="index.xhtml">Anasayfa</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="kurumsal.xhtml">Kurumsal</a></li>
+
+                                   
+
+
+                                    <li class="menu-item-has-children">
+                                        <a href="kampanyalar.xhtml">Kampanyalar</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a>
+                                    </li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="tarifeler.xhtml">Tarifeler</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-deneyimi.xhtml">Yolculuk Deneyimi</a>
+                                    </li>
+                                    
+                                     <li class="menu-item-has-children">
+                                        <a href="musteri.xhtml">Müşteri Paneli</a>
+                                    </li>
+
+
+
+                                </ul>     
+                            </nav>
+            </div>
+
+
+        </div>
+       
+        
+        <div id="travelo-login" class="travelo-login-box travelo-box">
+                    <h:form>
+
+                        <label>E-Mail: </label>
+                        <h:inputText  class="input-text full-width" value="#{MAloginBean.eposta}" id="eposta"></h:inputText>
+                        <label>Şifre:  </label>
+                        <h:inputSecret class="input-text full-width" value="#{MAloginBean.sifre}"></h:inputSecret>
+                        <hr />
+                        <h:commandButton type="submit" class="input-text full-width" action="#{MAloginBean.check}"
+                                         value="Login"></h:commandButton>
+                        <div class="form-group">
+                            <a href="#" class="forgot-password pull-right">Şifremi Unuttum</a>
+                            <div class="checkbox checkbox-inline">
+                                <label>
+                                    <input type="checkbox"/> Beni Hatırla
+                                </label>
+                            </div>
+                        </div>
+                    </h:form>
+                    <div class="seperator"></div>
+                    <p>Üye kaydınız yok mu? <a href="#travelo-signup" class="goto-signup soap-popupbox">KAYIT OL</a></p>
+                </div>
+    </header>
+    <section id="content" class="image-bg1">
+        <div class="container">
+            <div class="row">
+                <div id="main" class="col-sm-8 col-md-9">
+                    <div class="search-box-wrapper style1">
+                        <div class="search-box">
+                            <ul class="search-tabs clearfix">
+                                <li  class="active"><a><i class="soap-icon-cruise"></i>Biletleri Görüntüle</a></li>
+                                <li class="active"><a><i class="soap-icon-locations"></i>Onayla</a></li>
+                                <li class="active"><a><i class="soap-icon-clock"></i>Rezervasyon</a></li>
+                                <li class="active"><a><i class="soap-icon-anchor"></i>Ödeme</a></li>
+                                <li class="active"><a><i class="soap-icon-card"></i>Bilet Bilgileri</a></li> 
+
+                            </ul>
+                            <div class="search-tab-content">
+                                <div class="tab-pane fade active in" id="biletler-tab">
+                                    <form action="flight-list-view.xhtml" method="post">
+                                        <div class="title-container">
+                                            <h2 class="search-title">Bilet Bilgileri</h2>
+                                            <p>Biletiniz aşağıdaki gibidir.</p>
+                                            <i class="soap-icon-card"></i>
+                                        </div>
+                                        <div class="search-content">
+
+                                            <div class="box">
+                                                <ul class="left">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+
+                                                <ul class="right">
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                <div class="ticket">
+                                                    <span class="airline">İDO</span>
+                                                    <span class="airline airlineslip">İDO</span>
+                                                    <span class="boarding">Yolculuk Bileti</span>
+                                                    <div class="content">
+                                                        <span class="jfk">BİLET</span>
+
+                                                        <span class="jfk jfkslip">BİLET</span>
+                                                        <div class="sub-content">
+                                                            <span class="watermark">idoidoido</span>
+                                                            <span class="name">Bilet No<br/><span>#{dropdownView.biletID}</span></span>
+
+                                                            <span class="flight flightslip">Bilet No<br/><span>#{dropdownView.biletID}</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="barcode"></div>
+                                                    <div class="barcode slip"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar col-sm-4 col-md-3">
+                    <div class="travelo-box contact-box">
+                        <h4>Müşteri Hizmetleri</h4>
+                        <p>7/24 size destek oluyoruz. Arayın destek olalım.</p>
+                        <address class="contact-details">
+                        <span class="contact-phone"><i class="soap-icon-phone"/>444 44 44</span>
+                        <br/>
+                        <a class="contact-email" href="#">info@ido.com</a>
+                        </address>
+                    </div>
+                    <div class="travelo-box book-with-us-box">
+                        <h4>Neden Biz?</h4>
+                        <ul>
+                            <li>
+                                <i class="soap-icon-hotel-1 circle"></i>
+                                <h5 class="title"><a href="#">Kurumsal Anlayış</a></h5>
+                                <p>Vizyoner kurumsal anlayışımızı sizde deneyim edin.</p>
+                            </li>
+                            <li>
+                                <i class="soap-icon-savings circle"></i>
+                                <h5 class="title"><a href="#">Uygun Fiyat</a></h5>
+                                <p>Fırsatlarımızdan yararlanarak uygun fiyata bilet alabilirsiniz.</p>
+                            </li>
+                            <li>
+                                <i class="soap-icon-support circle"></i>
+                                <h5 class="title"><a href="#">7/24 Destek</a></h5>
+                                <p>İstediğiniz her anda size destek veriyoruz.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+                    <div class="footer-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Keşfet</h2>
+                                    <ul class="discover triangle hover row">
+                                        <li class="col-xs-6"><a href="index.xhtml">Anasayfa</a></li>
+                                        <li class="col-xs-6"><a href="../admin/login.xhtml">Admin Girişi</a></li>
+                                        <li class="col-xs-6"><a href="tarifeler.xhtml">Tarifeler</a></li>
+                                        <li class="col-xs-6"><a href="kampanyalar.xhtml">Kampanyalar</a></li>
+                                        <li class="col-xs-6"><a href="duyurular.xhtml">Duyurular</a></li>
+                                        <li class="col-xs-6"><a href="kalite-politikamız.xhtml">Kalite Politikamız</a></li>
+                                        <li class="col-xs-6"><a href="odeme-noktalari.xhtml">Ödeme Noktaları</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-sonrasi.xhtml">Yolculuk Sonrası</a></li>
+                                        <li class="col-xs-6"><a href="sss.xhtml">S.S.S.</a></li>
+                                        <li class="col-xs-6"><a href="kurumsal.xhtml">Kurumsal</a></li>
+                                        <li class="col-xs-6"><a href="personelGirisi.xhtml">Personel Girişi</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Duyurular</h2>
+                                    <h:dataTable  value="#{DuyuruBean.getDuyuruAltCek()}"  var="myvariable" >
+
+                                        <h:column>
+
+
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>
+                                            <BR/>
+
+
+
+                                        </h:column>
+
+
+
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Kampanyalar</h2>
+                                    <h:dataTable  value="#{KampanyaBean.kampanyaAltCek}"  var="myvariable" >
+                                        <h:column> 
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>  
+                                                                                        <BR/>
+
+                                        </h:column>
+                                        
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>İletişim</h2>
+                                    <p>Her türlü konuda şirketimizin bilgi işlem sorumlusu ile görüşebilirsiniz</p>
+                                    <br />
+                                    <address class="contact-details">
+                                        <span class="contact-phone"><i class="soap-icon-phone"></i> 444 44 44</span>
+                                        <br />
+                                        <a href="#" class="contact-email">info@ido.com</a>
+                                    </address>
+                                    <ul class="social-icons clearfix">
+                                        <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+                                        <li class="googleplus"><a title="googleplus" href="#" data-toggle="tooltip"><i class="soap-icon-googleplus"></i></a></li>
+                                        <li class="facebook"><a title="facebook" href="#" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+                                        <li class="linkedin"><a title="linkedin" href="#" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+                                        <li class="vimeo"><a title="vimeo" href="#" data-toggle="tooltip"><i class="soap-icon-vimeo"></i></a></li>
+                                        <li class="dribble"><a title="dribble" href="#" data-toggle="tooltip"><i class="soap-icon-dribble"></i></a></li>
+                                        <li class="flickr"><a title="flickr" href="#" data-toggle="tooltip"><i class="soap-icon-flickr"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom gray-area">
+                        <div class="container">
+                            <div class="logo pull-left">
+                                <a href="index.xhtml" title="Travelo - home">
+                                    <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
+                            </div>
+                            <div class="copyright pull-right">
+                                <p>ido.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+</div>
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.noconflict.js"></script>
+<script type="text/javascript" src="js/modernizr.2.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
+
+<!-- Twitter Bootstrap -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- load revolution slider scripts -->
+<script type="text/javascript" src="components/revolution_slider/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="components/revolution_slider/js/jquery.themepunch.revolution.min.js"></script>
+
+<!-- Flex Slider -->
+<script type="text/javascript" src="components/flexslider/jquery.flexslider-min.js"></script>
+
+<!-- load BXSlider scripts -->
+<script type="text/javascript" src="components/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+<!-- parallax -->
+<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+
+<!-- waypoint -->
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+
+<!-- load page Javascript -->
+<script type="text/javascript" src="js/theme-scripts.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+

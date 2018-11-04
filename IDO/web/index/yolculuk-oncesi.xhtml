@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"> <!--<![endif]-->
+    <head>
+        <!-- Page Title -->
+        <title>İDO - İstanbul Deniz Otobüsleri A.Ş.</title>
+
+        <!-- Meta Tags -->
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="HTML5 Template" />
+        <meta name="description" content="Travelo | Responsive HTML5 Travel Template"/>
+        <meta name="author" content="SoapTheme"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Theme Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="css/animate.min.css"/>
+
+        <!-- Main Style -->
+        <link id="main-style" rel="stylesheet" href="css/style.css"/>
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/custom.css"/>
+
+        <!-- Updated Styles -->
+        <link rel="stylesheet" href="css/updates.css"/>
+
+        <!-- Responsive Styles -->
+        <link rel="stylesheet" href="css/responsive.css"/>
+
+        <!-- CSS for IE -->
+        <!--[if lte IE 9]>
+            <link rel="stylesheet" type="text/css" href="css/ie.css" />
+        <![endif]-->
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header id="header" class="navbar-static-top">
+                <div class="topnav hidden-xs">
+                    <div class="container">
+                        <ul class="quick-menu pull-left">
+                            <li><a href="#travelo-login" class="soap-popupbox">MÜŞTERİ GİRİŞİ</a></li>
+                            <li><a href="#travelo-signup" class="soap-popupbox">KAYIT</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-header">
+
+
+
+                    <div class="container">
+                        <h1 class="logo navbar-brand">
+                            <a href="index.xhtml" title="Travelo - home">
+                                <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                            </a>
+                        </h1>
+
+                        <nav id="main-menu" role="navigation">
+                                <ul class="menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="index.xhtml">Anasayfa</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="kurumsal.xhtml">Kurumsal</a></li>
+
+                                   
+
+
+                                    <li class="menu-item-has-children">
+                                        <a href="kampanyalar.xhtml">Kampanyalar</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a>
+                                    </li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="tarifeler.xhtml">Tarifeler</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="yolculuk-deneyimi.xhtml">Yolculuk Deneyimi</a>
+                                    </li>
+ <li class="menu-item-has-children">
+                                        <a href="musteri.xhtml">Müşteri Paneli</a>
+                                    </li>
+
+
+                                </ul>     
+                            </nav>
+                    </div>
+
+                </div>
+                <div id="travelo-signup" class="travelo-signup-box travelo-box">
+
+                    <div class="simple-signup">
+                        <h:form>
+
+
+
+                            <div class="form-group">
+                                <h:outputText value="İsim:"/>
+                                <h:inputText class="input-text full-width" id="IsimText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.isim}" maxlength="20"/>
+                            </div>
+
+                            <div class="form-group">
+                                <h:outputText value="Soyisim:"/>
+                                <h:inputText class="input-text full-width" id="SoyisimText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.sisim}" maxlength="20"/>
+
+                            </div>
+
+                            <div class="form-group">
+                                <h:outputText value="T.C:"/>
+                                <h:inputText class="input-text full-width" id="TCText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.TC}" maxlength="11"/>
+
+                            </div>
+
+                            <div class="form-group">
+                                <h:outputText value="Doğum Tarihi:"/>
+                                <h:inputText class="input-text full-width" id="DoğumTarihiText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.dtarihi}"  maxlength="11"/> 
+                            </div>
+
+
+                            <div class="form-group">
+                                <h:outputText value="E-Posta:"/>
+                                <h:inputText class="input-text full-width" id="EpostaText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.eposta}" maxlength="30"/>
+                            </div>
+
+                            <div class="form-group">
+                                <h:outputText value="Şifre:"/>
+                                <h:inputText class="input-text full-width" id="SifreText" required="true"
+                                             requiredMessage="Lütfen Doldurunuz"
+                                             value="#{MusteriBean.sifre}" maxlength="30"/>
+                            </div>                    
+
+                      
+                            <h:commandButton class="input-text full-width" value="Musteri Ekle" action="#{MusteriBean.ekleKullanici}"/>
+
+
+                        </h:form>
+                    </div>
+                    <div class="seperator"></div>
+                    <p>Kayıtlı mısınız? <a href="#travelo-login" class="goto-login soap-popupbox">Giriş</a></p>
+                </div>
+
+                <div id="travelo-login" class="travelo-login-box travelo-box">
+                    <h:form>
+
+                        <label>E-Mail: </label>
+                        <h:inputText  class="input-text full-width" value="#{MAloginBean.eposta}" id="eposta"></h:inputText>
+                        <label>Şifre:  </label>
+                        <h:inputSecret class="input-text full-width" value="#{MAloginBean.sifre}"></h:inputSecret>
+                        <hr />
+                        <h:commandButton type="submit" class="input-text full-width" action="#{MAloginBean.check}"
+                                         value="Login"></h:commandButton>
+                        <div class="form-group">
+                            <a href="#" class="forgot-password pull-right">Şifremi Unuttum</a>
+                            <div class="checkbox checkbox-inline">
+                                <label>
+                                    <input type="checkbox"/> Beni Hatırla
+                                </label>
+                            </div>
+                        </div>
+                    </h:form>
+                    <div class="seperator"></div>
+                    <p>Üye kaydınız yok mu? <a href="#travelo-signup" class="goto-signup soap-popupbox">KAYIT OL</a></p>
+                </div>
+
+            </header>
+
+            <div class="page-title-container">
+                <div class="container">
+                    <div class="page-title pull-left">
+                        <h2 class="entry-title">Yolculuk Öncesi</h2>
+                    </div>
+                    <ul class="breadcrumbs pull-right">
+                        <li><a href="index.xhtml">Anasayfa</a></li>
+                        <li class="active">Yolculuk Öncesi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section id="content">
+                <div class="container"/>
+                <div id="main">
+                                            <div class="row">
+
+                    <h4 style="padding-right:50px; padding-left:50px;">BİLET SATIŞ KANALLARI 
+
+İnternetten 3D Secure sistemle güvenli bir ortamda online bilet alımınızı gerçekleştirebilirsiniz.
+İnternetten online gerçekleştirebileceğiniz işlemler :
+Kredi Kartı ile Online Bilet satın alabilirsiniz,
+Online Satın Aldığınız bir  bileti iade edebilirsiniz,
+Milpuan ile Ödül Bilet* alabilirsiniz,
+Satın aldığınız Online Biletleri görüntüleyebilirsiniz,
+Üyelik Bilgilerinizi ve Kişisel Bilgilerinizi güncelleyebilirsiniz. **
+
+**Sadece Üye olarak işlem yapanlar için geçerlidir.
+----Terminaller 
+
+----Bilet değişiklik ve iade talebi
+	1 Mart 2016 tarihinde e-bilet uygulamasına geçiş nedeniyle Bilet değişiklik ve iade kurallarımız değişmiştir.
+
+	İnternet aracılığıyla, mobil uygulama kanalıyla ve 0850 222 44 36 Çağrı Merkezi’nden satın alınan biletler, basılı 	olup olmadığı farketmeksizin, mobil uygulama hariç tüm satış kanallarından değiştirilebilir veya iptal edilebilir.
+	Gişe ve Acente’den kredi kartı veya nakit alınan biletlerin değişiklik veya iptali ancak gişe ve acente üzerinden 	yapılabilir. Metro acentelerinden alınan İDO biletlerini iptal,iade,değişikliği ilgili Metro acentesinden 	yapılmaktadır.
+	Bilet değişiklik ve iade koşullarına göre, değişiklik ve iade taleplerinde yapılacak kesinti ( cayma tazminatı ), 	Hizmet Bedeli düşüldükten sonra KDV dahil toplam tutar üzerinden hesaplanır.
+	Bilet değişiklik ve iade koşulları bilet sınıflarına göre değişiklik göstermektedir, Satış Kanalına göre farklılık 	gösteren Hizmet Bedelinin iadesi yapılmaz. ( Hizmet bedeli düşüldükten sonra kalan tutar iade edilir.)
+	BİZ ( Business ) sınıfı ve VIP ( VİP Oda ) biletler hızlı feribot üst salon biletleridir ve sadece Yenikapı-	Bandırma ve Yenikapı-Bursa Hızlı Feribot hatlarında bulunmaktadır.	
+
+
+
+ENGELLİ YOLCULARIMIZ
+	Özel durumlarını terminal sorumlularına iletmeleri durumunda, terminallerimizde, gerekli tüm yardım ve kolaylık , 	engelli konuklarımıza sağlanacaktır. Deniz otobüsü terminallerinin tamamında tekerlekli sandalye bulunmaktadır, 	gemi tipine göre yardımla veya  doğrudan , engelli konuklarımız gemiye geçiş yapabilmektedir.	
+	* : Engelli WC bulunmaktadır.
+
+	Fiziksel Engelliler için Özel Donatılmış Deniz Otobüsleri
+
+	Deniz Otobüsleri, iç ve dış hatlarda sadece yaya yolcu taşıyan hızlı deniz araçlarıdır.
+	2007 yılında İDO filosuna katılan yeni deniz otobüsleri, engelli konuklarımızın gemiye geçişini kolaylaştıracak 		donanımlara sahiptir. Ayrıca bu deniz otobüslerinde engelli konuklarımıza özgü WC'ler bulunmaktadır. 
+	ENGELLİ İNDİRİMİ
+T.C. Başbakanlık Özürlüler İdaresi Başkanlığı, T.C. Aile ve Sosyal Politikalar Bakanlığı, Özürlü ve Yaşlı Genel Müdürlüğü tarafından verilmiş %40 ve üzerinde oranda özürü bulunan özürlü kimlik kartı ve sağlık raporuna sahip yolcularımız iç ve dış hatlarda,İndirimli İstanbulkart  sahibi engelli yolcularımız ise tüm iç hatlarımızda ilgili indirimli tarifemiz ile geçiş yapmaktadırlar. 
+	İletişim
+Engelli konuklarımız gerçekleştirecekleri seyahatleleriyle ilgili bilgi almak için aşağıdaki iletişim kanallarını kullanabilirler.
+Telefon : 0850 222 44 36    -   Önce 3 ardından 1 'i tuşlayınız 
+E-posta : engelyok@ido.com.tr
+</h4>
+                    
+                    
+
+                </div>
+                </div>   
+            </section>
+
+            <footer id="footer">
+                    <div class="footer-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Keşfet</h2>
+                                    <ul class="discover triangle hover row">
+                                        <li class="col-xs-6"><a href="index.xhtml">Anasayfa</a></li>
+                                        <li class="col-xs-6"><a href="../admin/login.xhtml">Admin Girişi</a></li>
+                                        <li class="col-xs-6"><a href="tarifeler.xhtml">Tarifeler</a></li>
+                                        <li class="col-xs-6"><a href="kampanyalar.xhtml">Kampanyalar</a></li>
+                                        <li class="col-xs-6"><a href="duyurular.xhtml">Duyurular</a></li>
+                                        <li class="col-xs-6"><a href="kalite-politikamız.xhtml">Kalite Politikamız</a></li>
+                                        <li class="col-xs-6"><a href="odeme-noktalari.xhtml">Ödeme Noktaları</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-oncesi.xhtml">Yolculuk Öncesi</a></li>
+                                        <li class="col-xs-6"><a href="yolculuk-sonrasi.xhtml">Yolculuk Sonrası</a></li>
+                                        <li class="col-xs-6"><a href="sss.xhtml">S.S.S.</a></li>
+                                        <li class="col-xs-6"><a href="kurumsal.xhtml">Kurumsal</a></li>
+                                                                                <li class="col-xs-6"><a href="personelGirisi.xhtml">Personel Girişi</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Duyurular</h2>
+                                    <h:dataTable  value="#{DuyuruBean.getDuyuruAltCek()}"  var="myvariable" >
+
+                                        <h:column>
+
+
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>
+                                            <BR/>
+
+
+
+                                        </h:column>
+
+
+
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>Kampanyalar</h2>
+                                    <h:dataTable  value="#{KampanyaBean.kampanyaAltCek}"  var="myvariable" >
+                                        <h:column> 
+                                            <div class="description">
+                                                <h4 class="s-title"><a>#{myvariable.BASLIK}</a></h4>
+                                                <h6>#{myvariable.ACIKLAMA}</h6>
+                                                <span class="date">#{myvariable.TARIH}</span>
+                                            </div>  
+                                                                                        <BR/>
+
+                                        </h:column>
+                                        
+                                    </h:dataTable>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h2>İletişim</h2>
+                                    <p>Her türlü konuda şirketimizin bilgi işlem sorumlusu ile görüşebilirsiniz</p>
+                                    <br />
+                                    <address class="contact-details">
+                                        <span class="contact-phone"><i class="soap-icon-phone"></i> 444 44 44</span>
+                                        <br />
+                                        <a href="#" class="contact-email">info@ido.com</a>
+                                    </address>
+                                    <ul class="social-icons clearfix">
+                                        <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
+                                        <li class="googleplus"><a title="googleplus" href="#" data-toggle="tooltip"><i class="soap-icon-googleplus"></i></a></li>
+                                        <li class="facebook"><a title="facebook" href="#" data-toggle="tooltip"><i class="soap-icon-facebook"></i></a></li>
+                                        <li class="linkedin"><a title="linkedin" href="#" data-toggle="tooltip"><i class="soap-icon-linkedin"></i></a></li>
+                                        <li class="vimeo"><a title="vimeo" href="#" data-toggle="tooltip"><i class="soap-icon-vimeo"></i></a></li>
+                                        <li class="dribble"><a title="dribble" href="#" data-toggle="tooltip"><i class="soap-icon-dribble"></i></a></li>
+                                        <li class="flickr"><a title="flickr" href="#" data-toggle="tooltip"><i class="soap-icon-flickr"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom gray-area">
+                        <div class="container">
+                            <div class="logo pull-left">
+                                <a href="index.xhtml" title="Travelo - home">
+                                    <img src="images/logo.png" alt="Travelo HTML5 Template" />
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
+                            </div>
+                            <div class="copyright pull-right">
+                                <p>ido.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+        </div>
+
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.noconflict.js"></script>
+        <script type="text/javascript" src="js/modernizr.2.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
+
+        <!-- Twitter Bootstrap -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+
+        <!-- parallax -->
+        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+
+        <!-- waypoint -->
+        <script type="text/javascript" src="js/waypoints.min.js"></script>
+
+        <!-- load page Javascript -->
+        <script type="text/javascript" src="js/theme-scripts.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+
+    </body>
+</html>
+

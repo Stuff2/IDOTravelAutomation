@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!-- vapurekle.html -->
+ <!-- Form for adding an entry to an address book -->
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+ <h:head>
+ <title>Vapur Ekleme</title>
+  </h:head>
+ <h:body>
+ <h1>Vapur Ekle</h1>
+ <h:form>
+ <h:panelGrid columns="3">
+ <h:outputText value="Vapur İsmi:"/>
+ <h:inputText id="IsimText" required="true"
+ requiredMessage="Lütfen Doldurunuz"
+ value="#{VapurBean.isim}" maxlength="20"/>
+ 
+ <h:message for="IsimText"/>
+ <h:outputText value="Kapasite:"/>
+ <h:inputText id="KapasiteText" required="true"
+ requiredMessage="Lütfen Doldurunuz"
+ value="#{VapurBean.kapasite}" maxlength="30"/>
+ <h:message for="KapasiteText"/>
+ <h:outputText value="Tanim:"/>
+ <h:inputText id="TanimText" required="true"
+ requiredMessage="Lütfen Doldurunuz"
+ value="#{VapurBean.tanim}" maxlength="140"/>
+ <h:message for="TanimText"/>
+ </h:panelGrid>
+<h:commandButton value="Save Address"
+action="#{VapurBean.ekle}"/>
+
+ </h:form>
+ <h:outputLink value="index.xhtml">Return to Addresses</h:outputLink>
+ </h:body>
+ </html>

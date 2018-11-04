@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<html class="" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"> <!--<![endif]-->
+    <head>
+        <!-- Page Title -->
+        <title>Personel Girişi</title>
+
+        <!-- Meta Tags -->
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="HTML5 Template" />
+        <meta name="description" content="Travelo | Responsive HTML5 Travel Template"/>
+        <meta name="author" content="SoapTheme"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Theme Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,200,300,500' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="css/animate.min.css"/>
+
+        <!-- Main Style -->
+        <link id="main-style" rel="stylesheet" href="css/style.css"/>
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/custom.css"/>
+
+        <!-- Updated Styles -->
+        <link rel="stylesheet" href="css/updates.css"/>
+
+        <!-- Responsive Styles -->
+        <link rel="stylesheet" href="css/responsive.css"/>
+
+
+    </head>
+    <body class="soap-login-page style1 body-blank">
+        <section id="content">
+            <div class="container">
+                <div id="main">
+                    <h1 class="logo block">
+                        <a href="index.xhtml" title="Travelo - home">
+                            <img src="images/logo2.png" alt="Travelo HTML5 Template" />
+                        </a>
+                    </h1>
+                                   <p class="light-blue-color block" style="font-size: 1.3333em;">PERSONEL GİRİŞİ</p>
+
+                    <div class="col-sm-8 col-md-6 col-lg-5 no-float no-padding center-block">
+        
+                            <h:form>
+
+                        <label>E-Mail: </label>
+                        <h:inputText   class="input-text input-large full-width" value="#{PAloginBean.eposta}" id="eposta"></h:inputText>
+                        <label>Şifre:  </label>
+                        <h:inputSecret  class="input-text input-large full-width" value="#{PAloginBean.sifre}"></h:inputSecret>
+                        <hr />
+                        <h:commandButton type="submit" class="btn-large full-width sky-blue1" action="#{PAloginBean.check}"
+                                         value="Login"></h:commandButton>
+                    
+                    </h:form>
+                 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="footer-wrapper"></div>
+        </footer>
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.noconflict.js"></script>
+        <script type="text/javascript" src="js/modernizr.2.7.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.1.10.4.min.js"></script>
+
+        <!-- Twitter Bootstrap -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+
+        <script type="text/javascript">
+            var enableChaser = 0;
+        </script>
+        <!-- parallax -->
+        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+
+        <!-- waypoint -->
+        <script type="text/javascript" src="js/waypoints.min.js"></script>
+
+        <!-- load page Javascript -->
+        <script type="text/javascript" src="js/theme-scripts.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+
+    </body>
+</html>
+
